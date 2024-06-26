@@ -28,12 +28,12 @@ body{
 
 @media only screen and (max-width: 768px) {
     .opening{
-        font-size: 45px;
+        font-size: 40px;
         margin-top: 20px;
         margin-bottom: 10px;
     }
     .cat_img{
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
     }
 }
