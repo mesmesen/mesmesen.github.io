@@ -25,3 +25,15 @@ body{
     width: 600px;
     height: 600px;
 }
+
+@media only screen and (max-width: 768px) {
+    .opening{
+        font-size: 45px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .cat_img{
+        width: 280px;
+        height: 280px;
+    }
+}
