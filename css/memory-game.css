@@ -1,0 +1,94 @@
+body {
+    background-image: url(https://wallpapers.com/downloads/high/cute-cat-pattern-0al04rq0pajwtm2t.webp);
+    background-size: 400px 400px;
+    margin: 0;
+}
+
+.toppen{
+    width: 100%;
+    height: 75px;
+    /* background-color: rgb(105, 0, 97);  ska fixas mer (nu är det fult bara)*/
+}
+.TheGame{
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    height: 800px;
+    width: 590px;
+}
+.errors{
+    color:rgb(192, 0, 134);
+    font-family: silly;
+    font-size: 45px;
+    margin: 0;
+    margin-top: 10px;
+    text-shadow: 2px 2px 1px #0a0327;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+}
+
+.ErrorText{
+    width:160px;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.board{
+    height: 610px;
+    width: 530px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    border: 10px solid rgb(36, 36, 36);
+    border-radius: 15px;
+}
+
+.card{
+    height: 145px;
+    width: 101px;
+    margin: 2.5px;
+    cursor: pointer;
+}
+
+
+@font-face{
+    font-family: silly;
+    src:url(fonts/KGDownBadCryingAtTheGym.ttf);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .toppen{
+        width:100%;
+        height: 60px;
+    }
+    .TheGame{
+        height: 700px;
+        width: 380px;
+    }
+   
+    .board{
+        height: 400px;
+        width: 360px;
+       
+        margin-top: 12px;
+        border: 8px solid rgb(36, 36, 36);
+        border-radius: 15px;
+    }
+    .card{
+        height: 95px;
+        width: 67px;
+        margin: 2.5px;
+        cursor: pointer;
+    }
+}

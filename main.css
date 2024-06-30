@@ -5,7 +5,7 @@ body{
 
 @font-face{
     font-family: silly;
-    src:url(fonts/KGDownBadCryingAtTheGym.ttf)
+    src:url(css/fonts/KGDownBadCryingAtTheGym.ttf)
 }
 
 .opening{
