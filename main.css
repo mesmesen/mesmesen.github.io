@@ -26,6 +26,38 @@ body{
     height: 600px;
 }
 
+.knapp{
+    height: 60px;
+    width: 160px;
+    background-color: #fff;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.knapp:active{
+    background-color: rgb(175, 175, 175);
+}
+.knapp p {
+    font-size: 20px;
+    margin: 0;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:20px
+    
+}
+
+.SCORE {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    color:white;
+}
+
+
+
 @media only screen and (max-width: 768px) {
     .opening{
         font-size: 40px;
