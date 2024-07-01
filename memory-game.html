@@ -9,10 +9,29 @@
 <body>
     <div class="toppen">
         <!--Toppen typ idk-->
+        <a href="./">
+            <div class="back_button">
+                <p>Go Back</p>
+            </div>
+        </a>
+        <div class="name_game"><p>Memory Game!</p></div>
     </div>
-    <div>
+    <div class="the_mains">
         <!--mAIN 3 DIVVAR-->
-        <div class="svårhet"></div>
+        <div class="svårhet">
+            <div class="theme0">
+                <p>THEMES</p>
+            </div>
+            <div class="theme1">
+                <img src="bilder/memory/pokemon.png" alt="">
+            </div>
+            <div class="theme2">
+                <img src="bilder/memory/pokemon.png" alt="">
+            </div>
+            <div class="theme3">
+                <img src="bilder/memory/pokemon.png" alt="">
+            </div>
+        </div>
         <div class="TheGame">
             <div class="ErrorText">
              <p class="errors">ERRORS: <span id="errors">0</span></p>
@@ -20,9 +39,19 @@
             <div class="board" id="board">
 
             </div>
+            <div class="restart" id="BAJS">
+                <p>Restart</p>
+            </div>
         </div>
-        <div class="stats"></div>
+        <div class="stats">
+            <p class=early_title><span class="score_title">Scores:</span></p>
+            <p>Best Score: <span id="best_score"></span> Errors</p>
+            <p>Total Errors: <span id="error_total">0</span></p>
+            <p>Total Wins: <span id="total_wins"></span></p>
+        </div>
         <script src="javascript/memory-gamy.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     </div>
+    <img id="vinst" class="vinst" src="bilder/memory/pris.png" alt="" style="display:none;">
 </body>
 </html>
