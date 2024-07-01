@@ -37,10 +37,11 @@ body {
     border-color: black;
     border-style: solid;
     text-align: center;
+    width: 190px;
 }
 
 .ErrorText{
-    width:160px;
+    width:190px;
     display: table;
     margin-right: auto;
     margin-left: auto;
@@ -469,5 +470,24 @@ body {
     .restart{ 
         margin-left: 128px;
      }
+
+     .vinst{
+        
+        height: 0px;
+        width: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top:270px;
+        animation: pulse 1300ms infinite, display 1000ms;
+        
+    }
+    .errors{
+        font-size: 45px;
+        margin-top: 45px;
+        width: 180px;
+    }
+    
 
 }
