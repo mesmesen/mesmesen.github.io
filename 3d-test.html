@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-sky color="#8ace00"></a-sky>
+        <a-assets>
+            <a-asset-tiems  id="johan" src="bilder/GLB/Scaniverse 2024-05-07 164713.glb"></a-asset-tiem>
+                <a-asset-tiems  id="johan2" src="bilder/GLB/test johan.glb"></a-asset-tiem>
+        </a-assets>
+        <a-entity position="2 -3 -5" scale="8 8 8"  gltf-model="#johan"></a-entity>
+        <a-entity position="-5 -4 0" scale="3 3 3"  gltf-model="#johan2"></a-entity>
+    </a-scene>
+    
+</body>
+</html>
