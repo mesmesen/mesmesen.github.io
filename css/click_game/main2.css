@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color:rgb(110, 154, 196);
+}
+.main {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 16 / 11; 
+    max-width: 100vw;
+    max-height: calc(100vh - 50px); 
+    margin: 20px auto; 
+    outline: 5px solid #000;
+    border-radius: 4px;
+    overflow: hidden; /*DETTA TOG FÖR LÅNG TID ATT GOOGLA RUNT OM OMFG*/
+    position: relative;
+}
+
+.start{
+    background-image:url(/bilder/click/äng.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    margin: 0;
+    scale:1.1;
+    
+}
+
+.sol{
+    position: absolute; /* Position it relative to the .main div */
+    top: 14%; /* Position from the top of the .main div */
+    left: 20%; /* Position from the left of the .main div */
+    width: 10%; /* Width of the image */
+    height: 14.5455%; /* Height of the image */
+    border-radius: 5px; /* Optional: border radius */
+    animation: moveAndSpin 4s infinite ease-in-out; /* Apply the animation */
+    z-index: 11;
+}
+.sol img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    cursor: pointer;
+    
+}
+
+@keyframes moveAndSpin {
+    0% {
+        transform: translate(0, 0) rotate(0deg); 
+    }
+    25% {
+        transform: translate(170%, -65%) rotate(140deg); 
+    }
+    50% {
+        transform: translate(0, -85%) rotate(-40deg); 
+    }
+    75% {
+        transform: translate(-150%, 30%) rotate(240deg); 
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg); 
+    }
+}
+@font-face{
+    font-family: pixel;
+    src:url(fonts2/Daydream.ttf);
+}
+.start_knappar{
+    position: absolute;
+    height: 42%;
+    width: 40%;
+    left: 30%;
+    top:46%;
+    
+
+}
+.new_knapp {
+    background-color: blue;
+    height: 26%;
+    display: flex; /* Use flexbox to center the text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden;
+    width: 70%;
+    margin:auto;
+    border-radius: 30px;
+    border: solid;
+    border-width: 5px;
+    margin-bottom: 5%;
+    animation: ramfärg 5s infinite ease-in-out;
+    cursor: pointer;
+}
+.new_knapp img{
+    height: 240%;
+    width: 100%;
+    transition: scale 300ms;
+}
+.new_knapp img:hover{
+    scale:116%;
+}
+@keyframes ramfärg {
+    0% {
+        border-color:rgb(129, 129, 129) ;
+    }
+    50% {
+        border-color:rgb(0, 0, 0) ; 
+    }
+    100% {
+        border-color:rgb(129, 129, 129) ;
+    }
+}
+
+.title{
+    position: absolute;
+    overflow: hidden;
+    left: 22%;
+    top:-2%;
+}
+.title img{
+    width: 75%;
+    z-index: 9;
+    animation: title 3s infinite ease-in-out
+}
+@keyframes title {
+    0% {
+        scale:100%;
+        left:22%;
+    }
+    50% {
+        scale:114%;
+        left:20%; 
+    }
+    100% {
+        scale:100%;
+        left:22%;
+    }
+}
+
+.transistion{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    z-index: 99;
+    opacity: 0;
+    display: none;
+}
+.hidden{
+    opacity: 1;
+}
