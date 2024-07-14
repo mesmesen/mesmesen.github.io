@@ -173,6 +173,13 @@ function dalen_scene(){
 const dalenScene = document.getElementById("dalen_scene");
 
 
+const circusScene = document.getElementById("circus_scene")
+function circus_scene(){
+    circusScene.style.display = "block"
+    scene = 5
+}
+
+
 
 
 //KANPP LYSSN MELLAN SCENERNA   
@@ -267,6 +274,29 @@ sign2text.addEventListener("click",function(){
     }, 300);
 })
 
+const pathLeft =document.getElementById("path_left");
+pathLeft.addEventListener("click",function(){
+    faden.forEach(element => unfadeFast(element));
+    
+    setTimeout(() => {
+        faden.forEach(element => fadeOutFast(element));
+        dalenScene.style.display = "none";
+        circus_scene()
+        
+    }, 300);
+})
+
+const sign3 = document.getElementById("sign3")
+sign3.addEventListener("click",function(){
+    faden.forEach(element => unfadeFast(element));
+    
+    setTimeout(() => {
+        faden.forEach(element => fadeOutFast(element));
+        circusScene.style.display = "none";
+        dalen_scene()
+        
+    }, 300);
+})
 
 
 
@@ -368,7 +398,12 @@ creepScene.addEventListener("click", function(){
 let scene = 0
 // 0 = starten liksom
 // 1 = hemmagrejen
+// 2 hus inne första
+// 3 hus inne källare
+//4 dalen
+//5 circus
 
+//666 jumpscare
 
 
 
