@@ -1,0 +1,63 @@
+.home_scene{
+    position: absolute;
+    background-image:url(/bilder/click/home_scen.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    margin-left: 10%;
+    scale:1.6;
+    
+}
+
+.huset{
+    position: absolute;
+    width: 26%;
+    height: 38%;
+    left: 21%;
+    top: 31%;
+
+}
+.dörren{
+    position: absolute;
+    width: 5%;
+    height: 12%;
+    left: 34.8%;
+    top: 50.55%;
+    cursor: pointer;
+}
+.dörren:hover{
+    width: 5.5%;
+    height: 13%;
+    left: 34.5%;
+    top: 50%;
+}
+
+.himmel{
+    position: absolute;
+    width: 21%;
+    height: 36%;
+    left: 52%;
+    top: 19%;
+    cursor: pointer;
+}
+.himmel:hover{
+    width: 22%;
+    height: 38%;
+    left: 51.5%;
+    top: 18.5%;
+}
+
+.sign1{
+    position: absolute;
+    width: 10%;
+    height: 17%;
+    left: 62%;
+    top: 59%;
+    cursor: pointer;
+}
+.sign1:hover{
+    width: 11%;
+    height: 19%;
+    left: 61.5%;
+    top: 57.6%;
+}

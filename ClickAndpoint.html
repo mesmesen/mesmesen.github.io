@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href = "css/click_game/main2.css">
+    <link type="text/css" rel="stylesheet" href = "css/click_game/home_scen.css">
 </head>
 <body>
+    <img class="bajsbajs" id="bajs" src="bilder/click/chrome bajs.webp" alt="">
     <div class="main">
         <div id="faden" class="transistion"></div>
         <div id="starten" class="start">
@@ -24,9 +26,17 @@
                 </div>
             </div>
         </div>
+        <div id="home_scene" class="home_scene" style="display:none">
+            <img src="bilder/click/himmel_väg2.png" alt="" class="himmel">
+            <img class="huset" src="bilder/click/hus_gul1.png" alt="">
+            <img class="dörren" src="bilder/click/hus_dörr1.png" alt="">
+            <img src="bilder/click/sign1_2.png" alt="" class="sign1">
+            
+        </div>
         
     </div>
     <audio id="background-music" src="/audio/click_game/output.wav" autoplay loop></audio>
+    <audio id="main_music" src="/audio/click_game/main_song.wav"  loop></audio>
     <audio id="sol_ljud" src="/audio/click_game/sol_ljud2.wav"></audio>
     <script src="javascript/click_game.js"></script>
 </body>

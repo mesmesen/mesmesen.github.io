@@ -2,8 +2,14 @@
 document.addEventListener("DOMContentLoaded", () => {
 const start_song = document.getElementById('background-music');
 start_song.volume = 0.3;
-//IF bla blad
-//start_song.pause();
+
+
+const bajs = document.getElementById("bajs");
+bajs.addEventListener("click",function(){
+    bajs.style.display = "none"
+    start_song.play(); 
+})
+
 
 
 function fadeOutAudio() {
@@ -21,35 +27,35 @@ function fadeOutAudio() {
 }
 
 function unfade(faden) {
-    let op = 0;  // Initialize opacity to 0
+    let op = 0;  
     faden.style.opacity = op;
-    faden.style.display = 'block'; // Ensure the div is visible
+    faden.style.display = 'block'; 
 
     var timer = setInterval(function () {
         if (op >= 1) {
             clearInterval(timer);
-            faden.style.opacity = 1; // Ensure opacity is exactly 1 when done
+            faden.style.opacity = 1; 
         } else {
-            op += 0.1;  // Increment opacity
+            op += 0.1;  
             faden.style.opacity = op;
         }
-    }, 100);  // Update every 100ms for a smoother fade-in
+    }, 100);  
 }
 function fadeOut(faden) {
-    let op = 1;  // Initialize opacity to 1 (fully visible)
+    let op = 1;  
     faden.style.opacity = op;
-    faden.style.display = 'block'; // Ensure the div is visible
+    faden.style.display = 'block';
 
     var timer = setInterval(function () {
         if (op <= 0) {
             clearInterval(timer);
-            faden.style.opacity = 0;  // Ensure opacity is exactly 0 when done
-            faden.style.display = 'none'; // Hide the div
+            faden.style.opacity = 0;  
+            faden.style.display = 'none'; 
         } else {
-            op -= 0.1;  // Decrement opacity
+            op -= 0.1;  
             faden.style.opacity = op;
         }
-    }, 100);  // Update every 100ms for a smoother fade-out
+    }, 100); 
 }
 
 
@@ -65,7 +71,9 @@ const new_game = document.getElementById("new_game");
 const faden = document.querySelectorAll('.transistion')
 const starten = document.getElementById("starten");
 
+const homeScene = document.getElementById("home_scene");
 
+const mainMusic = document.getElementById("main_music");
 new_game.addEventListener("click", function(){
     fadeOutAudio()
     faden.forEach(element => unfade(element));
@@ -73,9 +81,20 @@ new_game.addEventListener("click", function(){
     setTimeout(() => {
         faden.forEach(element => fadeOut(element));
         starten.style.display = "none";
+        home_scene()
     }, 2000);
 })
 
+
+
+function home_scene(){
+    homeScene.style.display = "block"
+    mainMusic.volume ="0.1"
+    setTimeout(() => {
+        mainMusic.play()
+    }, 1350);
+    console.log(homeScene.style.display)
+}
 
 
 });
