@@ -1,0 +1,103 @@
+.house1_scene{
+    background-image: url(/bilder/click//hus_inne.jpg);
+    position: absolute;
+    height: 120%;
+    width: 115%;
+    background-size: contain;
+    scale:1;
+    display: none;
+}
+
+.dörr_inne{
+    position: absolute;
+    width: 14.5%;
+    height: 25%;
+    left: 62%;
+    top: 28.9%;
+    cursor: pointer;
+}
+.dörr_inne:hover{
+    position: absolute;
+    width: 15.3%;
+    height: 26.4%;
+    left: 61.5%;
+    top: 28%;
+}
+
+.pil1{
+    cursor: pointer;
+    position: absolute;
+    width: 11%;
+    height: 18%;
+    left: 16%;
+    top: 64%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.pil1:hover{
+    box-shadow: 0px 0px 12px white;
+}
+
+.house2_scene{
+    background-image: url(/bilder/click/källare.jpg);
+    background-repeat:no-repeat;
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    background-size: contain;
+    scale:1;
+    display: none;
+    margin-top: 6%;
+}
+
+
+.lock_door{
+    position: absolute;
+    width: 21.5%;
+    height: 56.5%;
+    left: 79.5%;
+    top: 15%;
+    cursor: pointer;
+}
+.lock_door:hover{
+    width: 22.5%;
+    height: 58%;
+    left: 79%;
+    top: 14.2%;
+}
+
+.creep_door{
+    position: absolute;
+    width: 20%;
+    height: 34%;
+    left: 27%;
+    top: 23%;
+    cursor: pointer;
+}
+.creep_door:hover{
+    width: 21%;
+    height: 36%;
+    left: 26.5%;
+    top: 22%;
+}
+.lock{
+    position: absolute;
+    width: 5%;
+    height: 7%;
+    left: 89.5%;
+    top: 44%;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.ladder{
+    position: absolute;
+    width: 20%;
+    height: 63.5%;
+    left: 0%;
+    top: 7.1%;
+    cursor: pointer;
+    opacity: 0;
+}
+.ladder:hover{
+   opacity: 1;
+}

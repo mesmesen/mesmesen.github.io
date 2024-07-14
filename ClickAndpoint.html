@@ -6,10 +6,22 @@
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href = "css/click_game/main2.css">
     <link type="text/css" rel="stylesheet" href = "css/click_game/home_scen.css">
+    <link type="text/css" rel="stylesheet" href = "css/click_game/house_scene.css">
 </head>
 <body>
     <img class="bajsbajs" id="bajs" src="bilder/click/chrome bajs.webp" alt="">
     <div class="main">
+        <img id="meny" src="bilder/click/meny.png" alt="" class="meny">
+        <div class="svart"></div>
+        <div id="full_meny" class="full_meny">
+            <img id="redx" src="bilder/click/redx.png" alt="" class="exit">
+            <img src="bilder/click/settings2.png" alt="" class="settings2">
+            <img src="bilder/click/sett_musik.png" alt="" class="sett_musik">
+            <img id="valdon1" src="bilder/click/vald.png" alt="" class="valdon1">
+            <img id="valdoff1" src="bilder/click/vald.png" alt="" class="valdoff1">
+            <div id="ondiv1" class="ondiv1"></div>
+            <div id="offdiv1" class="offdiv1"></div>
+        </div>
         <div id="faden" class="transistion"></div>
         <div id="starten" class="start">
             <div class="sol" id="sol"><img src="bilder/click/sol3.png" alt="sol"></div>
@@ -29,15 +41,26 @@
         <div id="home_scene" class="home_scene" style="display:none">
             <img src="bilder/click/himmel_väg2.png" alt="" class="himmel">
             <img class="huset" src="bilder/click/hus_gul1.png" alt="">
-            <img class="dörren" src="bilder/click/hus_dörr1.png" alt="">
+            <img id="dörr_ut" class="dörren" src="bilder/click/hus_dörr1.png" alt="">
             <img src="bilder/click/sign1_2.png" alt="" class="sign1">
             
+        </div>
+        <div id="house1_scene" class="house1_scene">
+            <img id="dörr_inne" src="bilder/click/hus_dörr2.png" alt="" class="dörr_inne">
+            <img id="pil1" src="bilder/click/pil1.webp" alt="" class="pil1">
+        </div>
+        <div id="house2_scene" class="house2_scene">
+            <img src="bilder/click/lås_dörr.png" alt="" class="lock_door">
+            <img src="bilder/click/Lock_icon.png" alt="" class="lock">
+            <img src="bilder/click/dörr_läsk.png" alt="" class="creep_door">
+            <img id="ladder" src="bilder/click/stege.png" alt="" class="ladder">
         </div>
         
     </div>
     <audio id="background-music" src="/audio/click_game/output.wav" autoplay loop></audio>
     <audio id="main_music" src="/audio/click_game/main_song.wav"  loop></audio>
     <audio id="sol_ljud" src="/audio/click_game/sol_ljud2.wav"></audio>
+    <audio id="dörr_ljud" src="/audio/click_game/dörr.mp3"></audio>
     <script src="javascript/click_game.js"></script>
 </body>
 </html>
