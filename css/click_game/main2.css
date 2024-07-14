@@ -166,7 +166,7 @@ body{
 
 .meny{
     position: absolute;
-    z-index: 99;
+    z-index: 30;
    height: 10.5%;
    width: 8%;
    left: 90%;

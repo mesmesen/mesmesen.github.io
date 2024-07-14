@@ -101,3 +101,22 @@
 .ladder:hover{
    opacity: 1;
 }
+
+
+.creep_scene{
+    background-image: url(/bilder/click/dark_room.png);
+    position: absolute;
+    height: 120%;
+    width: 105%;
+    background-size: contain;
+    scale:1;
+    display: none;
+}
+
+.jump_scare{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}

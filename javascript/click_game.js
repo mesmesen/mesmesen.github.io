@@ -12,6 +12,11 @@ bajs.addEventListener("click",function(){
     }
 })
 
+//Item list basicly
+
+let key1 = "no"
+
+
 
 
 function fadeOutAudio() {
@@ -128,7 +133,7 @@ new_game.addEventListener("click", function(){
 })
 
 
-
+//SCENERNA
 function home_scene(){
     homeScene.style.display = "block"
     setTimeout(() => {
@@ -154,7 +159,14 @@ function house2_scene(){
 }
 const house2Scene = document.getElementById("house2_scene")
 
+function creep_scene(){
+    creepScene.style.display = "block"
+    scene = 666
+}
+const creepScene = document.getElementById("creep_scene") 
 
+
+//KANPP LYSSN MELLAN SCENERNA   
 
 dörrUt.addEventListener("click", function(){
     faden.forEach(element => unfadeFast(element));
@@ -209,9 +221,75 @@ stege.addEventListener("click", function(){
         
     }, 300);
 })
+
+const lockDoor = document.getElementById("lock_door");
+const lockDoorSound = document.getElementById("locked_door");
+
+lockDoor.addEventListener("click", function(){
+    if (key1 == "yes"){
+        //öppna dörren
+    }
+    else{
+        const randomNumber3 = Math.floor(Math.random() * 3) + 1;
+        const audioSak = "lock" + randomNumber3;
+        lockDoorSound.play()
+        const audioBajs = document.getElementById(audioSak);
+        audioBajs.play()
+    }
+})
+let creepCount = 1
+const creepDoor = document.getElementById("creep_door");
+creepDoor.addEventListener("click", function(){
+    if(creepCount == 1){
+        const audio = new Audio("audio/click_game/creep1.wav");
+        audio.play();
+    }
+    if(creepCount == 2){
+        const audio = new Audio("audio/click_game/creep2.wav");
+        audio.play();
+    }
+    if(creepCount == 3){
+        const audio = new Audio("audio/click_game/creep3.wav");
+        audio.play();
+        setTimeout(() => {
+            faden.forEach(element => unfadeFast(element));
     
+    setTimeout(() => {
+        faden.forEach(element => fadeOutFast(element));
+        house2Scene.style.display = "none";
+        creep_scene()
+        mainMusic.volume = "0"
+        jumpscaretest = 1
 
+    }, 300);
+        }, 800);
+    }
+    creepCount += 1
 
+})
+const scream = document.getElementById("scream");
+const jumpScare = document.getElementById("jump_scare");
+creepScene.addEventListener("click", function(){
+    if(jumpscaretest = 1){
+    setTimeout(() => {
+    scream.play()
+    jumpscaretest = 0
+    setTimeout(() => {
+        jumpScare.style.display ="block"
+        
+    }, 400);
+
+    setTimeout(() => {
+        jumpScare.style.display ="none"
+        creepScene.style.display ="none"
+        house2_scene()
+        if(sett_music == "yes"){
+            mainMusic.volume = "0.1"
+        }
+
+    }, 3000);
+}, 3000);}
+})
 
 //SCENER
 let scene = 0
@@ -248,9 +326,7 @@ ondiv1.addEventListener("click",function(){
     if(scene == 0){
         start_song.volume = 0.3
     }
-    if(scene == 1 || scene == 2 || scene == 3){
-        mainMusic.volume = 0.1
-    }
+    main_music_func()
     valdon1.style.display = "block"
     valdoff1.style.display = "none"
     sett_music = "yes"
@@ -262,6 +338,17 @@ offdiv1.addEventListener("click",function(){
     start_song.volume = 0
     mainMusic.volume = 0
 })
+
+
+function main_music_func(){
+    if(scene == 1 || scene == 2 || scene == 3){
+        mainMusic.volume = 0.1
+    }
+}
+
+
+
+
 
 });
 
