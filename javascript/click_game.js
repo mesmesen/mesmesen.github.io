@@ -157,13 +157,22 @@ function house2_scene(){
     house2Scene.style.display = "block"
     scene = 3
 }
-const house2Scene = document.getElementById("house2_scene")
+const house2Scene = document.getElementById("house2_scene");
 
 function creep_scene(){
     creepScene.style.display = "block"
     scene = 666
 }
-const creepScene = document.getElementById("creep_scene") 
+const creepScene = document.getElementById("creep_scene");
+
+
+function dalen_scene(){
+    dalenScene.style.display = "block"
+    scene = 4
+}
+const dalenScene = document.getElementById("dalen_scene");
+
+
 
 
 //KANPP LYSSN MELLAN SCENERNA   
@@ -222,6 +231,70 @@ stege.addEventListener("click", function(){
     }, 300);
 })
 
+
+const sign1 = document.getElementById("sign1");
+sign1.addEventListener("click", function(){
+    faden.forEach(element => unfadeFast(element));
+    
+    setTimeout(() => {
+        faden.forEach(element => fadeOutFast(element));
+        homeScene.style.display = "none";
+        dalen_scene()
+    }, 300);
+})
+
+const sign2 = document.getElementById("sign2");
+const sign2text = document.getElementById("sign2text");
+
+sign2.addEventListener("click",function(){
+    faden.forEach(element => unfadeFast(element));
+    
+    setTimeout(() => {
+        faden.forEach(element => fadeOutFast(element));
+        dalenScene.style.display = "none";
+        home_scene()
+        
+    }, 300);
+})
+sign2text.addEventListener("click",function(){
+    faden.forEach(element => unfadeFast(element));
+    
+    setTimeout(() => {
+        faden.forEach(element => fadeOutFast(element));
+        dalenScene.style.display = "none";
+        home_scene()
+        
+    }, 300);
+})
+
+
+
+
+
+
+//HÄR COPY PASTAR JAG FRÅN ADNRAS KÅDER BASICLY FÖR TEST ELLER LÄMNAR JAG KVAR OM DE FUNGERAR
+ // Function to set the opacity of .sign2
+ function setSignOpacity(opacity) {
+    document.querySelector('.sign2').style.opacity = opacity;
+}
+
+// Add event listeners to .hem_text
+document.querySelector('.hem_text').addEventListener('mouseover', function() {
+    setSignOpacity('1');
+});
+document.querySelector('.hem_text').addEventListener('mouseout', function() {
+    setSignOpacity('0');
+});
+
+// Add event listeners to .sign2
+document.querySelector('.sign2').addEventListener('mouseover', function() {
+    setSignOpacity('1');
+});
+document.querySelector('.sign2').addEventListener('mouseout', function() {
+    setSignOpacity('0');
+});
+
+//ANNAT??????
 const lockDoor = document.getElementById("lock_door");
 const lockDoorSound = document.getElementById("locked_door");
 
@@ -341,7 +414,7 @@ offdiv1.addEventListener("click",function(){
 
 
 function main_music_func(){
-    if(scene == 1 || scene == 2 || scene == 3){
+    if(scene == 1 || scene == 2 || scene == 3|| scene == 4){
         mainMusic.volume = 0.1
     }
 }

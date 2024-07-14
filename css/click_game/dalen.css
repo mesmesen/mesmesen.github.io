@@ -1,0 +1,56 @@
+.dalen_scene{
+    position: absolute;
+    background-image:url(/bilder/click/dalen_scene.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    scale:1.055;
+    display: none;
+}
+
+.path_left{
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    left: 33.5%;
+    top: 27%;
+    cursor: pointer;
+    opacity: 0;
+}
+.path_left:hover{
+    opacity: 1;
+}
+
+.path_right{
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    left: 53%;
+    top: 27%;
+    cursor: pointer;
+    opacity: 0;
+}
+.path_right:hover{
+    opacity: 1;
+}
+
+.sign2{
+    position: absolute;
+    width: 29%;
+    height: 67%;
+    left: 1.8%;
+    top: 21%;
+    cursor: pointer;
+    opacity: 0;  
+}
+.sign2:hover{
+    opacity: 1;  
+}
+.hem_text{
+    position: absolute;
+    width: 23%;
+    height: 15%;
+    left: 4%;
+    top: 25.5%;
+    cursor: pointer;
+}
