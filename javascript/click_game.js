@@ -134,6 +134,7 @@ new_game.addEventListener("click", function(){
 
 
 //SCENERNA
+// ALLAL SCENERNAAAAAAAAAAA
 function home_scene(){
     homeScene.style.display = "block"
     setTimeout(() => {
@@ -179,10 +180,15 @@ function circus_scene(){
     scene = 5
 }
 
-
+const  tentScene = document.getElementById("tent_scene")
+function tent_scene(){
+    tentScene.style.display = "block"
+    scene = 6
+}
 
 
 //KANPP LYSSN MELLAN SCENERNA   
+// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 dörrUt.addEventListener("click", function(){
     faden.forEach(element => unfadeFast(element));
@@ -286,7 +292,7 @@ pathLeft.addEventListener("click",function(){
     }, 300);
 })
 
-const sign3 = document.getElementById("sign3")
+const sign3 = document.getElementById("sign3");
 sign3.addEventListener("click",function(){
     faden.forEach(element => unfadeFast(element));
     
@@ -296,6 +302,20 @@ sign3.addEventListener("click",function(){
         dalen_scene()
         
     }, 300);
+})
+
+const tent = document.getElementById("tent");
+
+tent.addEventListener("click", function(){
+    faden.forEach(element => unfadeFast(element));
+    
+    setTimeout(() => {
+        faden.forEach(element => fadeOutFast(element));
+        circusScene.style.display = "none";
+        tent_scene()
+        
+    }, 300);
+
 })
 
 
@@ -402,6 +422,8 @@ let scene = 0
 // 3 hus inne källare
 //4 dalen
 //5 circus
+
+//6 circus tält
 
 //666 jumpscare
 

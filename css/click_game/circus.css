@@ -46,3 +46,15 @@
 .apartment:hover{
     opacity: 1; 
 }
+
+.tent_scene{
+    position: absolute;
+    background-image:url(/bilder/click/tent_scene.webp);
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    scale:1.2;
+    display: none;
+    background-repeat:no-repeat;
+    margin-top: 7%;
+}
