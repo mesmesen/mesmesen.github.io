@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const start_song = document.getElementById('background-music');
 start_song.volume = 0.3;
 
+const circus_song = document.getElementById("circus_music");
 
 const bajs = document.getElementById("bajs");
 bajs.addEventListener("click",function(){
@@ -313,6 +314,27 @@ tent.addEventListener("click", function(){
         faden.forEach(element => fadeOutFast(element));
         circusScene.style.display = "none";
         tent_scene()
+        mainMusic.pause()
+        circusTheme_maybe()
+        
+        
+    }, 300);
+
+
+})
+
+const backCircus = document.getElementById("back_circus");
+
+backCircus.addEventListener("click", function(){
+    faden.forEach(element => unfadeFast(element));
+    
+    setTimeout(() => {
+        faden.forEach(element => fadeOutFast(element));
+        tentScene.style.display = "none";
+        circus_scene()
+        main_music_maybe()
+        circusTheme()
+        
         
     }, 300);
 
@@ -382,6 +404,7 @@ creepDoor.addEventListener("click", function(){
         house2Scene.style.display = "none";
         creep_scene()
         mainMusic.volume = "0"
+        mainMusic.pause()
         jumpscaretest = 1
 
     }, 300);
@@ -408,6 +431,7 @@ creepScene.addEventListener("click", function(){
         house2_scene()
         if(sett_music == "yes"){
             mainMusic.volume = "0.1"
+            mainMusic.play()
         }
 
     }, 3000);
@@ -455,8 +479,11 @@ redx.addEventListener("click", function(){
 ondiv1.addEventListener("click",function(){
     if(scene == 0){
         start_song.volume = 0.3
+        start_song.play()
     }
     main_music_func()
+    circusTheme()
+
     valdon1.style.display = "block"
     valdoff1.style.display = "none"
     sett_music = "yes"
@@ -466,15 +493,40 @@ offdiv1.addEventListener("click",function(){
     valdoff1.style.display = "block"
     sett_music = "no"
     start_song.volume = 0
+    start_song.pause()
     mainMusic.volume = 0
+    mainMusic.pause()
+    circus_song.pause() 
 })
 
 
 function main_music_func(){
-    if(scene == 1 || scene == 2 || scene == 3|| scene == 4){
+    if(scene == 1 || scene == 2 || scene == 3|| scene == 4|| scene == 5){
         mainMusic.volume = 0.1
+        mainMusic.play()
     }
 }
+function main_music_maybe(){
+    if(sett_music == "yes"){
+        mainMusic.play()
+    }
+}
+function circusTheme(){
+    if(scene == 6){
+        circus_scene.volume = 0.5
+        circus_song.play()
+    }
+    else{
+        circus_song.pause() 
+    }
+}
+function circusTheme_maybe(){
+    if(sett_music == "yes"){
+        circus_song.play()
+    }
+}
+
+
 
 
 

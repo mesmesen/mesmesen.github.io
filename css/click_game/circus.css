@@ -58,3 +58,39 @@
     background-repeat:no-repeat;
     margin-top: 7%;
 }
+
+.hot_clown_sprite{
+    opacity: 1;
+    position: absolute;
+    width: 15%;
+    height: 47%;
+    left: 24%;
+    top: 36%;
+    cursor: pointer;
+}
+.hot_clown_sprite_S{
+    opacity: 0;
+    position: absolute;
+    width: 15%;
+    height: 47%;
+    left: 24%;
+    top: 36%;
+    cursor: pointer;
+}
+.hot_clown_sprite_S:hover{
+    opacity: 1;
+}
+.back_circus{
+    position: absolute;
+    width: 10%;
+    height: 12%;
+    left: 10%;
+    top: 68%;
+    cursor: pointer;
+}
+.back_circus:hover{
+    width: 11%;
+    height: 13%;
+    left: 9.5%;
+    top: 67.5%;
+}
