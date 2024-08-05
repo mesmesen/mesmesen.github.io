@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARTAY</title>
+    <link type="text/css" rel="stylesheet" href = "css/caribia.css">
+</head>
+<body>
+    <div class="back"></div>
+    <img src="bilder/caribia/parasoll.png" alt="parasoll" class="para">
+    <img src="bilder/caribia/beach-chair-png-free-unlimited-png-95161.png" alt="" class="stol">
+    <img src="bilder/caribia/fisk.png" alt="" class="fisk">
+    <img src="bilder/caribia/shinji.png" alt="" class="shinji">
+    <img src="bilder/caribia/shrimp.png" alt="" class="shrimp">
+    <audio id="låten" src="/bilder/caribia/Fyra Bugg & en Coca-Cola.mp3"></audio>
+    <script>
+        const audio = document.getElementById("låten");
+        const loopStartTime = 35; 
+        const loopEndTime = 178; 
+
+        audio.volume = 0.2;
+
+        audio.addEventListener("loadedmetadata", () => {
+            audio.currentTime = loopStartTime;
+        });
+
+        audio.addEventListener("canplaythrough", () => {
+            audio.play();
+        });
+
+        audio.addEventListener("timeupdate", () => {
+            if (audio.currentTime >= loopEndTime) {
+                audio.currentTime = 0;
+            }
+        });
+
+        window.onload = () => {
+            audio.play();
+        };
+    </script>
+</body>
+</html>

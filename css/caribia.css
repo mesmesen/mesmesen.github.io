@@ -1,0 +1,47 @@
+.back{
+    background-image: url("/bilder/caribia/pexels-photo-457882.jpeg");
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.para{
+    position: absolute;
+    rotate: -80deg;
+    height: 34%;
+    top:40%;
+    left: -5%;
+}
+.stol{
+    position: absolute;
+    height: 32%;
+    top:55%;
+    left: -1%; 
+}
+.fisk{
+    position: absolute;
+    height: 14%;
+    top:60%;
+    left: 72%;   
+}
+.shinji{
+    position: absolute;
+    height: 32%;
+    top:58%;
+    left: 4%; 
+}
+
+.shrimp{
+    position: absolute;
+    height: 8%;
+    top:58%;
+    left: 47%; 
+}
