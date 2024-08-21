@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skola24 Timetable Fetcher</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="bajsbajs">
+    <h1>Skola24 Timetable Fetcher</h1>
+    <form id="initialForm">
+        <label for="hostName">Kommun (Host Name):</label>
+        <input type="text" id="hostName" name="hostName" required><br><br>
+
+        <label for="schemaID">Schema ID:</label>
+        <input type="text" id="schemaID" name="schemaID" required><br><br>
+
+        <button type="submit">Fetch Schools</button>
+    </form>
+
+    <div id="schoolSelection" style="display:none;">
+        <h2>Select a School</h2>
+        <select id="schoolsDropdown"></select>
+        <button id="fetchTimetable">Get Timetable</button>
+    </div>
+
+    <div id="timetable" style="display:none;">
+        <h2>Timetable</h2>
+        <pre id="timetableData"></pre>
+    </div>
+</div>
+    <div class="salvisare">
+        <div class="toppen">
+            <p class="title">Salar</p>
+            <p id="add" class="add">+</p>
+        </div>
+        <div id="holders-container" class="holder">
+            <p class="sal_namn">Cad-salen</p>
+            <p class="status">Är ledig</p>
+            <p class="tid">00:22:30</p>
+            <p class="lärare">JANNE</p>
+            <p class="ämne">CAD</p>
+        </div>
+        
+    </div>
+    <div class="black_back" id="black_back"></div>
+    <div id="add_screen" class="add_screen">
+        <div class="bajs">
+            <p id="exit1" class="exit1">X</p>
+        </div>
+        <div id="search_name" class="search_name">
+            <h1 class="kommun_title">Välj Kommun</h1>
+            <input type="text" id="search" placeholder="Sök efter din kommun..." required autocomplete="off">
+            <div id="nameList"></div>
+            <div class="fade1"></div>
+        </div>
+        <div class="id_val" id="id_val">
+            <h1 class="id_title">Skriv in numret på salen</h1>
+            <input type="text" id="idval" placeholder="t.ex I204..." required autocomplete="off">
+            <p id="next1" class="next1">Fortsätt</p>
+        </div>
+        <div class="skol_val" id="skol_val">
+            <h1 class="skola_title">Välj Skola</h1>
+            <input type="text" id="search2" placeholder="Sök efter skolor..." required autocomplete="off">
+            <div id="nameList2"></div>
+            <div class="fade1"></div>
+        </div>
+        <div id="ge_namn" class="ge_namn">
+            <h1 class="namn_title">Ge salen valfritt namn</h1>
+            <input type="text" id="namnVal" placeholder="t.ex Bild salen..." required autocomplete="off">
+            <p id="spara" class="spara">Spara</p>
+        </div>
+    </div>
+
+    
+    <script src="test.js" type="module">
+        
+    </script>
+</body>
+</html>
