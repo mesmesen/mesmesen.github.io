@@ -1,4 +1,5 @@
 body{
+    margin: 0;
     background-color: #841566;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 20 20'%3E%3Cg %3E%3Cpolygon fill='%235C0F47' points='20 10 10 0 0 0 20 20'/%3E%3Cpolygon fill='%235C0F47' points='0 10 0 20 10 20'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -22,39 +23,11 @@ body{
     display: table;
     margin-right: auto;
     margin-left: auto;
-    width: 600px;
-    height: 600px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
 }
 
-.knapp{
-    height: 60px;
-    width: 160px;
-    background-color: #fff;
-    display: table;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 50px;
-    cursor: pointer;
-}
-.knapp:active{
-    background-color: rgb(175, 175, 175);
-}
-.knapp p {
-    font-size: 20px;
-    margin: 0;
-    display: table;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top:20px
-    
-}
-
-.SCORE {
-    display: table;
-    margin-right: auto;
-    margin-left: auto;
-    color:white;
-}
 
 
 
@@ -69,3 +42,400 @@ body{
         height: 250px;
     }
 }
+
+.nav {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 55px;
+    max-width: 700px; /* Adjust based on your needs */
+    margin: auto;
+}
+.box {
+    width: 44%; /* Ensures two boxes fit side by side */
+    height: 300px;
+    
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+.box2 {
+    width: 70%; /* Adjust this width as needed */
+    margin: 0px auto 0 auto; /* Centers the box horizontally */
+    text-align: center;
+    align-self: center;
+    height: 300px;
+}
+
+.ram{
+    transition: transform 700ms ease; 
+    width: 85%;
+    height: 85%;
+    transform-origin: 50% 0%; 
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    margin-left: 40px;
+}
+.ram:hover{
+    transform: rotate(-18deg);
+}
+
+.photoHolder{
+    position: relative;
+    height: 85%;
+    width: 85%;
+}
+.flyout01 {
+    position: absolute;
+    top: 55%; /* Center vertically */
+    left: 65%; /* Center horizontally */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    opacity: 0;
+    transform: translate(50%, 50%) scale(0); /* Start hidden */
+    transition: transform 850ms ease-in-out, opacity 850ms ease-in-out;
+    z-index: 5;
+  }
+  
+  .photoHolder:hover .flyout01 {
+    opacity: 1;
+    
+  }
+  
+  .flyout21 {
+    width: 40px;
+    height: 40px;
+    rotate: 50deg;
+  }
+  
+  .flyout22 {
+   width: 38px;
+   height: 44px;
+  }
+  
+  .flyout23 {
+    width: 49px;
+    height: 38px;
+  }
+  .flyout24 {
+    width: 49px;
+    height: 38px;
+  }
+  
+  .photoHolder:hover .flyout21 {
+    transform: translate(100px, -50px) scale(3) rotate(-40deg);
+  }
+  
+  .photoHolder:hover .flyout22 {
+    transform: translate(-170px, -80px) scale(3) rotate(-25deg);
+  }
+  
+  .photoHolder:hover .flyout23 {
+    transform: translate(-180px, 155px) scale(3) rotate(20deg);
+  }
+  .photoHolder:hover .flyout24 {
+    transform: translate(80px, -190px) scale(2.5) rotate(30deg);
+  }
+  
+  .photoHolder:not(:hover) .flyout01 {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+.lamp{
+    width: 95%;
+    height: 85%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.projHolder{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.flyout0 {
+    position: absolute;
+    top: 55%; /* Center vertically */
+    left: 65%; /* Center horizontally */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0); /* Start hidden */
+    transition: transform 850ms ease-in-out, opacity 850ms ease-in-out;
+    z-index: 5;
+  }
+  
+  .projHolder:hover .flyout0 {
+    opacity: 1;
+    
+  }
+  
+  .flyout11 {
+    width: 40px;
+    height: 40px;
+    rotate: 50deg;
+  }
+  
+  .flyout12 {
+   width: 38px;
+   height: 44px;
+  }
+  
+  .flyout13 {
+    width: 49px;
+    height: 38px;
+  }
+  
+  .projHolder:hover .flyout11 {
+    transform: translate(110px, 10px) scale(3.8) rotate(290deg);
+  }
+  
+  .projHolder:hover .flyout12 {
+    transform: translate(50px, -200px) scale(3) rotate(-340deg);
+  }
+  
+  .projHolder:hover .flyout13 {
+    transform: translate(-190px, 78px) scale(3) rotate(40deg);
+  }
+  
+  .projHolder:not(:hover) .flyout0 {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+.games{
+    width: 100%;
+    height: 100%;
+    cursor: pointer; 
+    transition: transform 850ms ease-in-out;
+    margin-left: 10%;
+    position: relative;
+    z-index: 10;
+}
+.games:hover{
+    transform: rotate(720deg);
+}
+
+.gameHolder{
+    position: relative;
+    height: 85%;
+    width: 85%;
+}
+.flyout {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0); /* Start hidden */
+    transition: transform 850ms ease-in-out, opacity 850ms ease-in-out;
+    z-index: 5;
+  }
+  
+  .gameHolder:hover .flyout {
+    opacity: 1;
+    
+  }
+  
+  .flyout1 {
+    width: 30px;
+    rotate: 50deg;
+  }
+  
+  .flyout2 {
+   width: 38px;
+  }
+  
+  .flyout3 {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .gameHolder:hover .flyout1 {
+    transform: translate(-160px, -10px) scale(4) rotate(290deg);
+  }
+  
+  .gameHolder:hover .flyout2 {
+    transform: translate(-140px, 80px) scale(3) rotate(-120deg);
+  }
+  
+  .gameHolder:hover .flyout3 {
+    transform: translate(150px, -90px) scale(3) rotate(40deg);
+  }
+  
+  .gameHolder:not(:hover) .flyout {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+.titles{
+    font-family: silly;
+    font-weight: bold;
+    font-size: 45px;
+    margin: 0;
+    color:rgb(183, 182, 255); 
+    text-decoration: underline wavy rgb(255, 255, 255) ;
+    cursor:default;
+}
+.brev{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+.brev2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+    visibility:hidden;
+    pointer-events:none;     
+}
+
+.brevHolder{
+    position: relative;
+  width: 95%; 
+  height: 85%; 
+}
+
+
+.flyout03 {
+    position: absolute;
+    top: 70%; /* Center vertically */
+    left: 45%; /* Center horizontally */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0); /* Start hidden */
+    transition: transform 850ms ease-in-out, opacity 850ms ease-in-out;
+    z-index: 5;
+  }
+  
+  .brevHolder:hover .flyout03 {
+    opacity: 1;
+    
+  }
+  
+  .flyout41 {
+    width: 40px;
+    height: 40px;
+    rotate: 50deg;
+  }
+  
+  .flyout42 {
+   width: 44px;
+   height: 32px;
+  }
+  
+  .flyout43 {
+    width: 55px;
+    height: 38px;
+  }
+
+  .flyout44 {
+    width: 42px;
+    height: 38px;
+  }
+  
+  .brevHolder:hover .flyout41 {
+    transform: translate(-50px, -290px) scale(2) rotate(290deg);
+  }
+  
+  .brevHolder:hover .flyout42 {
+    transform: translate(50px, -180px) scale(2) rotate(-370deg);
+  }
+  
+  .brevHolder:hover .flyout43 {
+    transform: translate(-180px, -190px) scale(1.8) rotate(-380deg);
+  }
+  .brevHolder:hover .flyout44 {
+    transform: translate(-70px, -155px) scale(3) rotate(19deg);
+  }
+  
+  .brevHolder:not(:hover) .flyout0 {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+.other{
+    width: 45%;
+    height: 75%;
+    cursor: pointer;
+    transition: width  300ms ease;
+    position: relative;
+    z-index: 10;
+
+}
+.other:hover{
+   width: 100%;
+   margin-left: 40;
+}
+
+.otherHolder{
+    position: relative;
+    height: 85%;
+    width: 100%;
+}
+.flyout02 {
+    position: absolute;
+    top: 30%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    opacity: 0;
+    transform: translate(50%, 50%) scale(0); /* Start hidden */
+    transition: transform 850ms ease-in-out, opacity 850ms ease-in-out;
+    z-index: 5;
+  }
+  
+  .otherHolder:hover .flyout02 {
+    opacity: 1;
+    
+  }
+  
+  .flyout31 {
+    width: 40px;
+    height: 40px;
+    rotate: 50deg;
+  }
+  
+  .flyout32 {
+   width: 38px;
+   height: 44px;
+  }
+  
+  .flyout33 {
+    width: 49px;
+    height: 38px;
+  }
+
+  
+  .otherHolder:hover .flyout31 {
+    transform: translate(130px, -70px) scale(3) rotate(-40deg);
+  }
+  
+  .otherHolder:hover .flyout32 {
+    transform: translate(-230px, -70px) scale(3) rotate(-25deg);
+  }
+  
+  .otherHolder:hover .flyout33 {
+    transform: translate(-155px, 90px) scale(2) rotate(20deg);
+  }
+ 
+  
+  .otherHolder:not(:hover) .flyout02 {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
