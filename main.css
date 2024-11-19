@@ -160,8 +160,8 @@ body{
 }
 .flyout0 {
     position: absolute;
-    top: 55%; /* Center vertically */
-    left: 65%; /* Center horizontally */
+    top: 44%; /* Center vertically */
+    left: 46%; /* Center horizontally */
     width: 50px; /* Adjust size as needed */
     height: 50px; /* Adjust size as needed */
     opacity: 0;
@@ -178,7 +178,6 @@ body{
   .flyout11 {
     width: 40px;
     height: 40px;
-    rotate: 50deg;
   }
   
   .flyout12 {
@@ -192,15 +191,15 @@ body{
   }
   
   .projHolder:hover .flyout11 {
-    transform: translate(110px, 10px) scale(3.8) rotate(290deg);
+    transform: translate(130px, 80px) scale(3.8) rotate(345deg);
   }
   
   .projHolder:hover .flyout12 {
-    transform: translate(50px, -200px) scale(3) rotate(-340deg);
+    transform: translate(120px, -170px) scale(3) rotate(-340deg);
   }
   
   .projHolder:hover .flyout13 {
-    transform: translate(-190px, 78px) scale(3) rotate(40deg);
+    transform: translate(-130px, 78px) scale(3) rotate(40deg);
   }
   
   .projHolder:not(:hover) .flyout0 {
@@ -209,11 +208,10 @@ body{
   }
 
 .games{
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 85%;
     cursor: pointer; 
     transition: transform 850ms ease-in-out;
-    margin-left: 10%;
     position: relative;
     z-index: 10;
 }
@@ -222,9 +220,9 @@ body{
 }
 
 .gameHolder{
-    position: relative;
-    height: 85%;
-    width: 85%;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 .flyout {
     position: absolute;

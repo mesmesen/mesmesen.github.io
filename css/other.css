@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    background-image: url("bilder/other_bak.jpg");
+    background-size: 600px 400px;
+    background-repeat:repeat;
+    animation: moveBackground 10s linear infinite;
+    height: 100vh;
+}
+
+@keyframes moveBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 600px 400px;
+    }
+  }
